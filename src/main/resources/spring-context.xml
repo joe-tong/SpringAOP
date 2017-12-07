@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--&lt;!&ndash;第二步 注册实现类对象&ndash;&gt;-->
+    <!--<bean id="sleepDao" class="com.demo.aop.proxy.SleepDaoImpl"/>-->
+    <!--&lt;!&ndash;代理类注册&ndash;&gt;-->
+    <!--<bean id="helper" class="com.demo.aop.proxy.SleepHelper"/>-->
+
+    <!--&lt;!&ndash;第二步 配置 切入点&ndash;&gt;-->
+    <!--<bean id="pointcut" class="org.springframework.aop.support.JdkRegexpMethodPointcut">-->
+        <!--<property name="pattern" value=".*sleep"/>-->
+    <!--</bean>-->
+    <!--&lt;!&ndash;第三步 配置通知&ndash;&gt;-->
+    <!--<bean id="advisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">-->
+        <!--&lt;!&ndash;helper 对象是代理类&ndash;&gt;-->
+        <!--<property name="advice" ref="helper"/>-->
+        <!--&lt;!&ndash;切入点&ndash;&gt;-->
+        <!--<property name="pointcut" ref="pointcut"/>-->
+        <!--&lt;!&ndash;<property name="order" value="1"/>&ndash;&gt;-->
+    <!--</bean>-->
+    <!--&lt;!&ndash;第四步 配置切面&ndash;&gt;-->
+    <!--<bean id="aspect" class="org.springframework.aop.framework.ProxyFactoryBean">-->
+        <!--&lt;!&ndash;代理的目标的实现类&ndash;&gt;-->
+        <!--<property name="target" ref="sleepDao"/>-->
+        <!--&lt;!&ndash;代理的接口对象&ndash;&gt;-->
+        <!--<property name="proxyInterfaces" value="com.demo.aop.proxy.SleepDao"/>-->
+        <!--&lt;!&ndash;代理的通知类&ndash;&gt;-->
+        <!--<property name="interceptorNames" value="advisor"/>-->
+    <!--</bean>-->
+
+</beans>
